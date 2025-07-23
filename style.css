@@ -1,0 +1,273 @@
+*{
+    border: 0%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+    position: relative;
+}
+body{background-color: #e4e1df;}
+.logo{
+    width: 90px;
+    height: 90px;
+    background-image: url('./Untitled-1\ copy\ b.png');
+    background-size: cover;
+    margin-left: 5vh;
+}
+
+.main{
+    display: flex;
+    width:120vh;
+    height: 70vh;
+    border: 1.5mm solid #640D5F;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    box-shadow: 0 10px 30px  rgba(0, 0, 0, 0.932);
+    
+}
+
+.body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+.main2{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color:#640D5F;
+}
+
+.main1 h1{
+    font-size: 6vh;
+    font-family:cursive;
+    text-align: center;
+}
+
+.main2 h1{
+    font-size: 6vh;
+    font-family:cursive;
+    text-align: center;
+    color: #e4e1df;;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.main1 h1,
+.main2 h1 {
+    animation: fadeIn 2s ease-out;
+}
+.main1 p{
+    font-size:4vh;
+    color: #640D5F;
+}
+
+.degbx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.degbx input{
+    width: 20vh;
+    border: 1mm solid #640D5F;
+    border-radius: 5px;
+    text-align: center;
+    height: 4.5vh;
+}
+
+.select{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.select select{
+    width: 20vh;
+    border: 1mm solid #640D5F;
+    border-radius: 5px;
+    text-align: center;
+    height: 5vh;
+}
+ 
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #640D5F;
+  transition: all 0.2s ease;
+  width: 20vh;
+  margin-bottom: 10vh;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+.main2 h2{
+font-size: 10vh;
+color: #E4E1DF;
+text-align: center;
+margin-top: 30%;
+}
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+    min-height: 60vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    margin-top: 5vw;
+  }
+
+  .main1, .main2 {
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    padding: 2vw 0;
+  }
+
+  .main1 h1,
+  .main2 h1 {
+    font-size: 4vh;
+  }
+
+  .main2 h2 {
+    font-size: 6vh;
+    margin-top: 10vw;
+  }
+
+  .degbx input,
+  .select select,
+  .button {
+    width: 80vw;
+    font-size: 2.5vh;
+  }
+  .button{
+    margin-bottom: 2vh;
+  }
+  .select p{
+    font-size: 3vh;
+  }
+  .select select{
+    width: 20vh;
+    border: 1mm solid #640D5F;
+    border-radius: 5px;
+    text-align: center;
+    height: 5vh;
+}
+.navbar{
+    justify-items: center;
+}
+.degbx p{
+    text-align: center;
+    margin-top: 1vh;
+}
+.degbx input{
+    margin-top: 1.5vh;
+}
+.select{
+    margin-top: 1.5vh;
+}
+.button{
+    margin-top: 1.5vh;
+}
+
+}
